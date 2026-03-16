@@ -24,17 +24,40 @@ body {
     position: relative;
 }
 
-.serif-font { font-family: var(--font-serif); }
-.text-rose { color: var(--color-rose); }
-.text-dark { color: var(--color-dark); }
-.text-muted { color: var(--color-text-muted); }
-.italic { font-style: italic; }
-.bold { font-weight: 700; }
-.font-normal { font-weight: 400; }
+.serif-font {
+    font-family: var(--font-serif);
+}
+
+.text-rose {
+    color: var(--color-rose);
+}
+
+.text-dark {
+    color: var(--color-dark);
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.font-normal {
+    font-weight: 400;
+}
 
 .pattern-overlay {
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDINFir4cR_lDiBf_YDq5eqyk7rRqpKlVQAKWIwR6g1z5JDrM1mlpp6sPmueBJiJDKrFEjj2XJY-PQ71aM4WW-R_VaxLcUQV7yQ2BHTd8H2krPVJ_z9mvb4_CPMZVVIigAhBCNoTw62SMbPWlQda0i0SarOru6XA3aV-TGDym7xM6xyJV6U7mARcmktj1XjAU-sjAPNDTcG7JogEWBHg97DarUSBA60-riZt2ozi7RDpCZMGQulhw-x5n89aOUsvAkXWhzFIXz9OH_d);
     opacity: 0.12;
     pointer-events: none;
@@ -45,7 +68,7 @@ body {
     position: relative;
     z-index: 10;
     width: 100%;
-    max-width: 56rem; 
+    max-width: 56rem;
     text-align: center;
     background: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(12px);
@@ -111,7 +134,9 @@ body {
 }
 
 @media (min-width: 768px) {
-    .main-heading { font-size: 6rem; }
+    .main-heading {
+        font-size: 6rem;
+    }
 }
 
 .divider {
@@ -131,7 +156,9 @@ body {
 }
 
 @media (min-width: 768px) {
-    .dates-grid { grid-template-columns: repeat(2, 1fr); }
+    .dates-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .date-card {
@@ -179,7 +206,7 @@ body {
 }
 
 .hours-card {
-    max-width: 24rem; 
+    max-width: 24rem;
     margin: 0 auto 3rem auto;
     padding: 1.5rem;
     border-radius: 1rem;
@@ -240,7 +267,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     text-decoration: none;
-    border-radius: 9999px; 
+    border-radius: 9999px;
     box-shadow: 0 10px 20px -5px rgba(219, 164, 149, 0.4);
     transition: all 0.3s ease;
 }
@@ -248,12 +275,12 @@ body {
 .booking-btn:hover {
     background-color: var(--color-dark);
     box-shadow: 0 15px 25px -5px rgba(74, 63, 58, 0.3);
-    transform: translateY(-3px); 
+    transform: translateY(-3px);
     color: var(--color-rose);
 }
 
 .booking-btn:active {
-    transform: scale(0.95) translateY(0); 
+    transform: scale(0.95) translateY(0);
 }
 
 .social-links {
