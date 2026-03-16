@@ -1,0 +1,295 @@
+:root {
+    --color-rose: #DBA495;
+    --color-cream: #F6EEEB;
+    --color-dark: #4a3f3a;
+    --color-text-muted: #9a8d87;
+    --font-sans: "Lato", sans-serif;
+    --font-serif: "Playfair Display", serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-sans);
+    background: radial-gradient(circle at center, #ffffff 0%, var(--color-cream) 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
+}
+
+h1, h2, .serif-font {
+    font-family: var(--font-serif);
+}
+
+.text-rose { color: var(--color-rose); }
+.italic { font-style: italic; }
+.bold { font-weight: 700; }
+
+.pattern-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDINFir4cR_lDiBf_YDq5eqyk7rRqpKlVQAKWIwR6g1z5JDrM1mlpp6sPmueBJiJDKrFEjj2XJY-PQ71aM4WW-R_VaxLcUQV7yQ2BHTd8H2krPVJ_z9mvb4_CPMZVVIigAhBCNoTw62SMbPWlQda0i0SarOru6XA3aV-TGDym7xM6xyJV6U7mARcmktj1XjAU-sjAPNDTcG7JogEWBHg97DarUSBA60-riZt2ozi7RDpCZMGQulhw-x5n89aOUsvAkXWhzFIXz9OH_d);
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: -20;
+}
+
+.deco-circle {
+    position: absolute;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    filter: blur(3rem);
+    z-index: -10;
+}
+
+.deco-circle-1 {
+    top: -5rem;
+    left: -5rem;
+    background-color: rgba(219, 164, 149, 0.1);
+}
+
+.deco-circle-2 {
+    bottom: -5rem;
+    right: -5rem;
+    background-color: #F6EEEB;
+}
+
+.main-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 56rem; 
+    text-align: center;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(219, 164, 149, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(219, 164, 149, 0.15);
+    border-radius: 3rem;
+    padding: 2rem;
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .main-container { padding: 4rem; }
+}
+
+.header-section {
+    margin-bottom: 3rem;
+}
+
+.brand-badge {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--color-rose);
+    border-top: 1px solid rgba(219, 164, 149, 0.3);
+    border-bottom: 1px solid rgba(219, 164, 149, 0.3);
+}
+
+.main-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-dark);
+    letter-spacing: -0.025em;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+    .main-heading { font-size: 6rem; }
+}
+
+.divider {
+    width: 6rem;
+    height: 0.25rem;
+    background-color: var(--color-rose);
+    opacity: 0.4;
+    margin: 0 auto;
+    border-radius: 9999px;
+}
+
+.dates-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    .dates-section { grid-template-columns: repeat(2, 1fr); }
+}
+
+.card {
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-soft {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(219, 164, 149, 0.2);
+}
+
+.card-grand {
+    background: rgba(246, 238, 235, 0.9);
+    border: 1px solid var(--color-rose);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--color-rose);
+    margin-bottom: 0.5rem;
+}
+
+.card-date {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: var(--color-dark);
+}
+
+.card-month {
+    display: block;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    margin-top: 0.25rem;
+    font-family: var(--font-sans);
+}
+
+.footer-interactions {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-text {
+    color: #6b5e59;
+    max-width: 28rem;
+    margin: 0 auto;
+    line-height: 1.625;
+}
+
+.email-signup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 28rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (min-width: 640px) {
+    .email-signup { flex-direction: row; }
+}
+
+.email-input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(219, 164, 149, 0.3);
+    background: rgba(255, 255, 255, 0.9);
+    color: var(--color-dark);
+    font-family: var(--font-sans);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.email-input::placeholder {
+    color: rgba(219, 164, 149, 0.6);
+}
+
+.email-input:focus {
+    border-color: var(--color-rose);
+    box-shadow: 0 0 0 3px rgba(219, 164, 149, 0.2);
+}
+
+.submit-btn {
+    padding: 1rem 2rem;
+    background-color: var(--color-rose);
+    color: white;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 15px -3px rgba(219, 164, 149, 0.3);
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    opacity: 0.9;
+}
+
+.submit-btn:active {
+    transform: scale(0.95);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    color: var(--color-rose);
+}
+
+.social-links a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--color-dark);
+}
+
+.booking-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.booking-btn {
+    display: inline-block;
+    padding: 1.25rem 3rem;
+    background-color: var(--color-rose);
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    border-radius: 9999px; 
+    box-shadow: 0 10px 20px -5px rgba(219, 164, 149, 0.4);
+    transition: all 0.3s ease;
+}
+
+.booking-btn:hover {
+    background-color: var(--color-dark);
+    box-shadow: 0 15px 25px -5px rgba(74, 63, 58, 0.3);
+    transform: translateY(-3px); 
+    color: var(--color-rose);
+}
+
+.booking-btn:active {
+    transform: scale(0.95) translateY(0); 
+}
